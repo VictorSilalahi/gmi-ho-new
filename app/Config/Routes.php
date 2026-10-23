@@ -5,13 +5,9 @@ use CodeIgniter\Router\RouteCollection;
 /** @var RouteCollection $routes */
 // $routes->get('/', 'Home::index');
 
-$routes->get('/', 'Distrik::index');
-$routes->get('/daftar', 'Distrik::daftar');
-$routes->post('/validasi', 'Distrik::validasi');
-$routes->get('/daftar/terima_kasih', 'Distrik::terima_kasih');
-$routes->post('/daftar/cek_email', 'Distrik::cek_email');
-$routes->post('/daftar/cek_distrik', 'Distrik::cek_distrik');
-$routes->post('/daftar/tambah_distrik', 'Distrik::tambah_distrik');
+$routes->get('/', 'Wilayah::index');
+$routes->post('/validasi', 'Wilayah::validasi');
+
 $routes->post('/seting/getinfodistrik', 'Distrik::get_info_distrik');
 $routes->post('/seting/password/change', 'Distrik::password_change');
 $routes->post('/seting/simpanalamatdistrik', 'Distrik::simpan_alamat_distrik');

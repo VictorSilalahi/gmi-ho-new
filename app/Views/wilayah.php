@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Distrik | GMI Wil-I</title>
+    <title>Head Office | GMI Wil-I</title>
 </head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
@@ -29,22 +29,8 @@
                 <form method="post" id="formLogin" action="<?php echo(base_url()); ?>validasi">
                   
                   <div data-mdb-input-init class="form-outline mb-4">
-                    <select class="form-control" id="slcDistrik" name="slcDistrik">
-                            <option value="D-I">D-I</option>
-                            <option value="D-II">D-II</option>
-                            <option value="D-III">D-III</option>
-                            <option value="D-IV">D-IV</option>
-                            <option value="D-V">D-V</option>
-                            <option value="D-VI">D-VI</option>
-                            <option value="D-VII">D-VII</option>
-                            <option value="D-VIII">D-VIII</option>
-                            <option value="D-IX">D-IX</option>
-                            <option value="D-X">D-X</option>
-                            <option value="D-XI">D-XI</option>
-                            <option value="D-XII">D-XII</option>
-                            <option value="D-XIII">D-XIII</option>
-                    </select>
-                    <label class="form-label" for="slcDistrik">Distrik</label>
+                    <input type="password" id="txtUsername" name="txtUsername" class="form-control" />
+                    <label class="form-label">Username</label>
                   </div>
 
                   <div data-mdb-input-init class="form-outline mb-4">
@@ -55,11 +41,6 @@
                   <div class="text-center pt-1 mb-5 pb-1">
                     <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3  btn-login" type="button">Log
                       in</button>
-                  </div>
-
-                  <div class="d-flex align-items-center justify-content-center pb-4">
-                    <p class="mb-0 me-2">Distrik belum terdaftar?</p>
-                    <a href="<?php echo(base_url()); ?>daftar"><button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-danger">Klik disini</button></a>
                   </div>
 
                 </form>
@@ -74,6 +55,6 @@
     
     <input type="hidden" id="base_url" value="<?php echo(base_url()); ?>">
 </body>
-    <script src="assets/js/inside/login.js" type="module"></script>
+    <script src="<?php echo(base_url()); ?>assets/js/inside/login.js" type="module"></script>
 
 </html>

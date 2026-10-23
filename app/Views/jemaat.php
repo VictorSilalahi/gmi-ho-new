@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jemaat Distrik | GMI Wil-I | SIGMI</title>
+    <title>Jemaat | GMI Wil-I | SIGMI</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
 </head>
@@ -21,18 +21,23 @@
 
             <nav class="navbar navbar-expand-md navbar-light bg-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">SIGMI | Distrik</a>
+                    <a class="navbar-brand" href="#">SIGMI | HeadOffice</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                     </button>
+
                     <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link  active" aria-current="page" href="<?php echo(base_url()); ?>jemaat">Jemaat</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>gereja/stat">Gereja</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>seting">Seting</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>logout">Logout</a></li>
-                    </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link  active" aria-current="page" href="<?php echo(base_url()); ?>jemaat">Jemaat</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>gereja">Gereja</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>distrik">Distrik</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>pencarian">Pencarian</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>user">User</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>seting">Seting</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>logout">Logout</a></li>
+                        </ul>
                     </div>
+                    
                 </div>
             </nav>
 
