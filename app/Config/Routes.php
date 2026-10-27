@@ -8,10 +8,7 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Wilayah::index');
 $routes->post('/validasi', 'Wilayah::validasi');
 
-$routes->post('/seting/getinfodistrik', 'Distrik::get_info_distrik');
 $routes->post('/seting/password/change', 'Distrik::password_change');
-$routes->post('/seting/simpanalamatdistrik', 'Distrik::simpan_alamat_distrik');
-$routes->post('/seting/simpankabkotadistrik', 'Distrik::simpan_kabkota_distrik');
 
 $routes->get('/seting', 'Distrik::seting');
 $routes->get('/logout', 'Distrik::logout');
@@ -23,6 +20,9 @@ $routes->get('/gereja/stat', 'Gereja::stat');
 $routes->get('/gereja/resort', 'Gereja::resort');
 $routes->get('/gereja/pemetaan', 'Gereja::pemetaan');
 $routes->post('/gereja/all', 'Gereja::gereja_all');
+
+$routes->get('/distrik', 'Distrik::index');
+
 
 
 
