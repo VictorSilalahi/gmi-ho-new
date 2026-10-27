@@ -6,13 +6,14 @@ import { pesan_error, pesan_sukses, pesan_tanya } from "../pesan.js";
 $(document).ready(function () {
 
   let gereja_url = $("#gereja_url").val()+"webapi/v1/distrik/jemaat/all";
-  let distrik = localStorage.getItem('distrik');
+//   let distrik = localStorage.getItem('distrik');
 
   check_token();
   
   $.LoadingOverlay("show");
 
-  let temp = ajax_post(gereja_url, {"distrik": distrik});
+//   let temp = ajax_post(gereja_url, {"distrik": distrik});
+  let temp = ajax_post(gereja_url, {});
 
   if (temp.msg=='ok') {
         let data = temp.data;

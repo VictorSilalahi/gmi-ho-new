@@ -24,10 +24,6 @@ class Gereja extends BaseController
         return view('gereja_stat');
     }
 
-    public function resort()
-    {
-        return view('gereja_resort');
-    }
 
     public function pemetaan()
     {
@@ -43,7 +39,7 @@ class Gereja extends BaseController
     public function gereja_all()
     {
 
-        $distrik = $this->request->getPost("distrik");
+        // $distrik = $this->request->getPost("distrik");
 
         $base_url = base_url();
         $buang = "distrik/";
@@ -57,7 +53,7 @@ class Gereja extends BaseController
         $response = $client->request('POST', $remote_api, [
             'verify'=>false,
             'form_params' => [
-                'distrik' => $distrik
+                'distrik' => ""
             ],
             'headers' => [
                 'User-Agent' => 'SIGMI/Distrik/1.0',

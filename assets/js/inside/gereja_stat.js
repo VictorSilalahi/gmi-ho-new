@@ -9,16 +9,21 @@ let map;
 $(document).ready(function () {
 
     let base_url = $("#base_url").val();
-    let distrik = localStorage.getItem('distrik');
+    let gereja_url = $("#gereja_url").val();
+    // let distrik = localStorage.getItem('distrik');
 
     check_token();
 
     $.LoadingOverlay("show");
 
-    let temp = ajax_post(base_url+"gereja/all", {"distrik": distrik});
+    // let temp = ajax_post(base_url+"gereja/all", {"distrik": distrik});
+    // let temp = ajax_post(base_url+"gereja/all", {});
+    let temp = ajax_post(gereja_url+"webapi/v1/distrik/gereja/all");
+
+    // console.log(temp);
 
     if (temp.msg=='ok') {
-            let data = temp.data.data;
+            let data = temp.data;
 
             console.log(data);
             let jumlah_gereja = data.length;
@@ -71,6 +76,9 @@ $(document).ready(function () {
 
             }
 
+            $(".divJumlahJemaatPenuh").text(tipe['Jemaat Penuh']);
+            $(".divJumlahJemaatPersiapan").text(tipe['Jemaat Persiapan']);
+            $(".divJumlahPospel").text(tipe['Pos Pelayanan']);
             $(".divJumlahGereja").text(jumlah_gereja);
 
 

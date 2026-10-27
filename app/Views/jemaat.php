@@ -28,7 +28,7 @@
 
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
-                            <li class="nav-item"><a class="nav-link  active" aria-current="page" href="<?php echo(base_url()); ?>jemaat">Jemaat</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="<?php echo(base_url()); ?>jemaat">Jemaat</a></li>
                             <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>gereja/stat">Gereja</a></li>
                             <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>distrik">Distrik</a></li>
                             <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>pencarian">Pencarian</a></li>

@@ -31,6 +31,8 @@
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>jemaat">Jemaat</a></li>
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="<?php echo(base_url()); ?>gereja/stat">Gereja</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>distrik">Distrik</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>pencarian">Pencarian</a></li>
                         <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>seting">Seting</a></li>
                         <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>logout">Logout</a></li>
                     </ul>
@@ -50,18 +52,47 @@
                     <a class="nav-link active" aria-current="page" href="<?php echo(base_url()); ?>gereja/stat">Statistik</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo(base_url()); ?>gereja/resort">Resort</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="<?php echo(base_url()); ?>gereja/pemetaan">Pemetaan</a>
                 </li>
             </ul>        
 
-            <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="col-sm-12 col-md-3 col-lg-3">
+                <div class="card text-white bg-secondary">
+                        <div class="card-body text-end">
+                            <h4 class="card-title">Jemaat Penuh</h4>
+                            <p class="card-text"><h1 class="divJumlahJemaatPenuh">0</h1></p>
+                        </div>
+                        <div class="card-footer">
+                            <h7>Jemaat Penuh</h7>
+                        </div>
+                </div>
             </div>
             
-            
-            <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="col-sm-12 col-md-3 col-lg-3">
+                <div class="card text-white bg-secondary">
+                        <div class="card-body text-end">
+                            <h4 class="card-title">Jemaat Persiapan</h4>
+                            <p class="card-text"><h1 class="divJumlahJemaatPersiapan">0</h1></p>
+                        </div>
+                        <div class="card-footer">
+                            <h7>Jemaat Persiapan</h7>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-3 col-lg-3">
+                <div class="card text-white bg-secondary">
+                        <div class="card-body text-end">
+                            <h4 class="card-title">Pos Pelayanan</h4>
+                            <p class="card-text"><h1 class="divJumlahPospel">0</h1></p>
+                        </div>
+                        <div class="card-footer">
+                            <h7>Pos Pelayanan</h7>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-3 col-lg-3">
 
                 <div class="card text-white bg-info">
                         <div class="card-body text-end">
