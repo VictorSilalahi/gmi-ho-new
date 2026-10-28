@@ -18,7 +18,25 @@
         <div class="row">
             <!-- Takes full width on mobile, half on tablets, one-third on desktops -->
             <div class="col-sm-6 vh-100 bg-dark bg-gradient">
-                
+                <div class="row" style="height:50px">
+                </div>
+
+                <div class="row">
+                  
+                    <div class="col-md-4 col-lg-4">
+                      
+                    </div>
+                    <div class="col-md-4 col-lg-4 text-center">
+                      <img src="<?php echo(base_url()); ?>assets/images/logo.jpg" class="rounded mx-auto d-block" alt="Rounded corners" style="width:300px;height:300px">
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                      
+                    </div>
+
+
+                </div>
+
+
             </div>
             <div class="col-sm-6">
 
