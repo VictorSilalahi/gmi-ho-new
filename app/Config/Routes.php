@@ -10,6 +10,7 @@ $routes->post('/validasi', 'Wilayah::validasi');
 
 $routes->post('/seting/password/change', 'Distrik::password_change');
 
+$routes->get('/pencarian', 'Distrik::pencarian');
 $routes->get('/seting', 'Distrik::seting');
 $routes->get('/logout', 'Distrik::logout');
 

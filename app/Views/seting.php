@@ -28,10 +28,12 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>jemaat">Jemaat</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="<?php echo(base_url()); ?>gereja/stat">Gereja</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>seting">Seting</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>logout">Logout</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>jemaat">Jemaat</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>gereja/stat">Gereja</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>distrik">Distrik</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>pencarian">Pencarian</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="<?php echo(base_url()); ?>seting">Seting</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>logout">Logout</a></li>
                     </ul>
                     </div>
                 </div>
@@ -68,44 +70,6 @@
                     </div>
                   </div>
 
-                  <div class="card">
-                    <div class="card-header">
-                      <h2>Data Distrik</h2>
-                    </div>
-                    <div class="card-body">
-
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <td class="fw-bold">Field</td>
-                            <td class="fw-bold">Data</td>
-                            <td class="fw-bold">Action</td>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>Distrik</td>
-                            <td id="nama_distrik"></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>Alamat Distrik</td>
-                            <td><input class="form-control" type="text" value="" id="txtAlamatDistrik"></td>
-                            <td><button class="btn btn-success btn-update-alamat-distrik">Simpan Perubahan</button></td>
-                          </tr>
-                          <tr>
-                            <td>Provinsi/Kab-Kota</td>
-                            <td>
-                              <select id="slcProvinsi"></select>
-                              <select id="slcKabKota"></select>
-                            </td>
-                            <td><button class="btn btn-success btn-update-kabkota-distrik">Simpan Perubahan</button></td>
-                          </tr>
-                        </tbody>
-                      </table>
-
-                    </div>
-                  </div>
 
         
         </div>

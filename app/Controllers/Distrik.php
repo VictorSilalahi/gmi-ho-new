@@ -28,6 +28,12 @@ class Distrik extends BaseController
         return view('terima_kasih');        
     }
 
+    public function pencarian()
+    {
+        return view('pencarian');
+        
+    }
+
     public function seting()
     {
         return view('seting');
