@@ -604,15 +604,15 @@ function loadDetailGereja(gereja_id) {
         $(".divJumlahKK").text(jumlah_kk);
 
 
-        let existingChart = Chart.getChart("TipeJemaat"); 
+        let existingChart = Chart.getChart("dTipeJemaat"); 
 
         if (existingChart) {
             existingChart.destroy();
         }
 
         // grafik utk tipe jemaat
-        const ctx_tipe_jemaat = document.getElementById('dTipeJemaat');
-        new Chart(ctx_tipe_jemaat, {
+        const ctx_tipe_jemaat_gereja = document.getElementById('dTipeJemaat');
+        new Chart(ctx_tipe_jemaat_gereja, {
                     type: 'pie',
                     data: {
                     labels: ['Penuh', 'Persiapan'],
@@ -634,15 +634,15 @@ function loadDetailGereja(gereja_id) {
         });
 
 
-        existingChart = Chart.getChart("KelompokUsia"); 
+        existingChart = Chart.getChart("dKelompokUsia"); 
 
         if (existingChart) {
             existingChart.destroy();
         }
         
         // grafik utk kelompok umur
-        const ctx_kelompok_umur = document.getElementById('dKelompokUsia');
-        new Chart(ctx_kelompok_umur, {
+        const ctx_kelompok_umur_gereja = document.getElementById('dKelompokUsia');
+        new Chart(ctx_kelompok_umur_gereja, {
                     type: 'pie',
                     data: {
                     labels: ['Anak-anak', 'Remaja', 'Pemuda', 'Dewasa', 'Lansia'],
@@ -664,15 +664,15 @@ function loadDetailGereja(gereja_id) {
         });
 
 
-        existingChart = Chart.getChart("PendidikanTerakhir"); 
+        existingChart = Chart.getChart("dPendidikanTerakhir"); 
 
         if (existingChart) {
             existingChart.destroy();
         }
 
         // grafik utk pendidikan terakhir
-        const ctx_pendidikan_terakhir = document.getElementById('dPendidikanTerakhir');
-        new Chart(ctx_pendidikan_terakhir, {
+        const ctx_pendidikan_terakhir_gereja = document.getElementById('dPendidikanTerakhir');
+        new Chart(ctx_pendidikan_terakhir_gereja, {
                     type: 'pie',
                     data: {
                     labels: ['None', 'SD', 'SMP', 'SMA_SMK', 'D3', 'S1', 'S2', 'S3'],
@@ -694,15 +694,15 @@ function loadDetailGereja(gereja_id) {
         });
 
 
-        existingChart = Chart.getChart("Pekerjaan"); 
+        existingChart = Chart.getChart("dPekerjaan"); 
 
         if (existingChart) {
             existingChart.destroy();
         }
         
         // grafik utk pekerjaan
-        const ctx_pekerjaan = document.getElementById('dPekerjaan');
-        new Chart(ctx_pekerjaan, {
+        const ctx_pekerjaan_gereja = document.getElementById('dPekerjaan');
+        new Chart(ctx_pekerjaan_gereja, {
                     type: 'pie',
                     data: {
                     labels: ['None', 'ASN', 'Dokter', 'Karyawan-Swasta', 'Pedagang', 'Petani', 'TNI-Polri', 'Wiraswasta'],
@@ -724,15 +724,15 @@ function loadDetailGereja(gereja_id) {
                 });
 
 
-        existingChart = Chart.getChart("Kebaktian"); 
+        existingChart = Chart.getChart("dKebaktian"); 
 
         if (existingChart) {
             existingChart.destroy();
         }        
 
         // grafik aktifitas kebaktian
-        const ctx_kebaktian = document.getElementById('dKebaktian');
-        new Chart(ctx_kebaktian, {
+        const ctx_kebaktian_gereja = document.getElementById('dKebaktian');
+        new Chart(ctx_kebaktian_gereja, {
                     type: 'bar',
                     data: {
                         labels: label_bulan,
@@ -765,15 +765,15 @@ function loadDetailGereja(gereja_id) {
         });
 
 
-        existingChart = Chart.getChart("OperasiDataJemaat"); 
+        existingChart = Chart.getChart("dOperasiDataJemaat"); 
 
         if (existingChart) {
             existingChart.destroy();
         }        
 
         // grafik aktifitas data jemaat
-        const ctx_operasi_jemaat = document.getElementById('dOperasiDataJemaat');
-        new Chart(ctx_operasi_jemaat, {
+        const ctx_operasi_jemaat_gereja = document.getElementById('dOperasiDataJemaat');
+        new Chart(ctx_operasi_jemaat_gereja, {
                     type: 'bar',
                     data: {
                         labels: label_bulan,
@@ -805,15 +805,15 @@ function loadDetailGereja(gereja_id) {
                     }
         });
 
-        existingChart = Chart.getChart("Kegiatan"); 
+        existingChart = Chart.getChart("dKegiatan"); 
 
         if (existingChart) {
             existingChart.destroy();
         }        
         
         // grafik aktifitas Kegiatan
-        const ctx_kegiatan = document.getElementById('dKegiatan');
-        new Chart(ctx_kegiatan, {
+        const ctx_kegiatan_gereja = document.getElementById('dKegiatan');
+        new Chart(ctx_kegiatan_gereja, {
                     type: 'bar',
                     data: {
                         labels: label_bulan,
@@ -846,15 +846,15 @@ function loadDetailGereja(gereja_id) {
         });
 
 
-        existingChart = Chart.getChart("JumlahJemaat"); 
+        existingChart = Chart.getChart("dJumlahJemaat"); 
 
         if (existingChart) {
             existingChart.destroy();
         }        
         
         // grafik jumlah jemaat perbulan
-        const ctx_jumlah_jemaat = document.getElementById('dJumlahJemaat');
-        new Chart(ctx_jumlah_jemaat, {
+        const ctx_jumlah_jemaat_gereja = document.getElementById('dJumlahJemaat');
+        new Chart(ctx_jumlah_jemaat_gereja, {
                     type: 'bar',
                     data: {
                         labels: label_bulan,
