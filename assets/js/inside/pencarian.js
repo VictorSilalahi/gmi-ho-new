@@ -143,7 +143,7 @@ function loadDetailGereja(gereja_id) {
         $(".divJumlahKK").text(jumlah_kk);
 
 
-        let existingChart = Chart.getChart("TipeJemaat"); 
+        let existingChart = Chart.getChart("dTipeJemaat"); 
 
         if (existingChart) {
             existingChart.destroy();
@@ -173,7 +173,7 @@ function loadDetailGereja(gereja_id) {
         });
 
 
-        existingChart = Chart.getChart("KelompokUsia"); 
+        existingChart = Chart.getChart("dKelompokUsia"); 
 
         if (existingChart) {
             existingChart.destroy();
@@ -203,7 +203,7 @@ function loadDetailGereja(gereja_id) {
         });
 
 
-        existingChart = Chart.getChart("PendidikanTerakhir"); 
+        existingChart = Chart.getChart("dPendidikanTerakhir"); 
 
         if (existingChart) {
             existingChart.destroy();
@@ -233,7 +233,7 @@ function loadDetailGereja(gereja_id) {
         });
 
 
-        existingChart = Chart.getChart("Pekerjaan"); 
+        existingChart = Chart.getChart("dPekerjaan"); 
 
         if (existingChart) {
             existingChart.destroy();
@@ -263,7 +263,7 @@ function loadDetailGereja(gereja_id) {
                 });
 
 
-        existingChart = Chart.getChart("Kebaktian"); 
+        existingChart = Chart.getChart("dKebaktian"); 
 
         if (existingChart) {
             existingChart.destroy();
@@ -304,7 +304,7 @@ function loadDetailGereja(gereja_id) {
         });
 
 
-        existingChart = Chart.getChart("OperasiDataJemaat"); 
+        existingChart = Chart.getChart("dOperasiDataJemaat"); 
 
         if (existingChart) {
             existingChart.destroy();
@@ -344,7 +344,7 @@ function loadDetailGereja(gereja_id) {
                     }
         });
 
-        existingChart = Chart.getChart("Kegiatan"); 
+        existingChart = Chart.getChart("dKegiatan"); 
 
         if (existingChart) {
             existingChart.destroy();
@@ -385,7 +385,7 @@ function loadDetailGereja(gereja_id) {
         });
 
 
-        existingChart = Chart.getChart("JumlahJemaat"); 
+        existingChart = Chart.getChart("dJumlahJemaat"); 
 
         if (existingChart) {
             existingChart.destroy();
