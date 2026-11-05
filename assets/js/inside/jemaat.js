@@ -18,7 +18,7 @@ $(document).ready(function () {
   if (temp.msg=='ok') {
         let data = temp.data;
 
-        // console.log(data);
+        console.log(data);
         
         if (data.length===0) {
             $.LoadingOverlay("hide");            
@@ -43,6 +43,7 @@ $(document).ready(function () {
         $(".divJumlahP3MI").text(data_seksi['P3MI']);
         $(".divJumlahPWMI").text(data_seksi['PWMI']);
         $(".divJumlahPRMI").text(data_seksi['PRMI']);
+        $(".divJumlahSM").text(data_seksi['SM']);
 
 
 

@@ -104,7 +104,7 @@ $(document).on("click", ".btn-tampil-gereja", function() {
             let marker = L.marker([marker_lat, marker_lng])
                 .addTo(map)
                 .bindTooltip(koordinat[i]['nama_gereja'], { 
-                    permanent: true, 
+                    permanent: false, 
                     direction: "top" 
             });            
 

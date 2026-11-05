@@ -86,7 +86,7 @@
 
 
 
-                    <div class="col-sm-12 col-md-3 col-lg-3">
+                    <div class="col-sm-12 col-md-3 col-lg-4">
 
                         <div class="card text-white bg-secondary">
                             <div class="card-body text-end">
@@ -97,7 +97,7 @@
 
                     </div>
 
-                    <div class="col-sm-12 col-md-3 col-lg-3">
+                    <div class="col-sm-12 col-md-3 col-lg-4">
 
                         <div class="card text-white bg-secondary">
                             <div class="card-body text-end">
@@ -108,7 +108,7 @@
 
                     </div>
 
-                    <div class="col-sm-12 col-md-3 col-lg-3">
+                    <div class="col-sm-12 col-md-3 col-lg-4">
 
                         <div class="card text-white bg-secondary">
                             <div class="card-body text-end">
@@ -119,17 +119,35 @@
 
                     </div>
 
-                    <div class="col-sm-12 col-md-3 col-lg-3">
+            
+
+        </div>
+
+        <br>
+
+        <div class="row">
+
+                    <div class="col-sm-12 col-md-6 col-lg-6">
 
                         <div class="card text-white bg-secondary">
                             <div class="card-body text-end">
                                 <h5 class="card-title">PRMI</h5>
-                                <p class="card-text"><h1 class="divJumlahPRWMI">0</h1></p>
+                                <p class="card-text"><h1 class="divJumlahPRMI">0</h1></p>
                             </div>
                         </div>
 
                     </div>
-            
+
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+
+                        <div class="card text-white bg-secondary">
+                            <div class="card-body text-end">
+                                <h5 class="card-title">SM</h5>
+                                <p class="card-text"><h1 class="divJumlahSM">0</h1></p>
+                            </div>
+                        </div>
+
+                    </div>
 
         </div>
 
