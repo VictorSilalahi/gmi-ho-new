@@ -506,12 +506,11 @@ function loadDataDistrik() {
     let gereja_url = $("#gereja_url").val();
     let temp = ajax_get(gereja_url+"webapi/v1/distrik/all", {});
 
+            // console.log(temp);
     if (temp.msg=='ok') {
 
         let str = "<option value=''></option>";
 
-        console.log(temp.data);
-        
         for (let i=0; i<temp.data.length; i++) {
 
             str = str + "<option value='"+temp.data[i]['nama_distrik']+"'>"+temp.data[i]['nama_distrik']+"</option>";
