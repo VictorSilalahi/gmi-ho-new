@@ -510,6 +510,8 @@ function loadDataDistrik() {
 
         let str = "<option value=''></option>";
 
+        console.log(temp.data);
+        
         for (let i=0; i<temp.data.length; i++) {
 
             str = str + "<option value='"+temp.data[i]['nama_distrik']+"'>"+temp.data[i]['nama_distrik']+"</option>";
