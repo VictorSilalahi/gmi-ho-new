@@ -40,8 +40,6 @@ $(document).on('change', "#slcDistrik", function() {
         if (temp.msg=='ok') {
                 let data = temp.data;
 
-                // console.log(data);
-                
                 $(".divNamaDistrik").text(distrik);
 
                 if (data.length===0) {
@@ -110,7 +108,6 @@ $(document).on('change', "#slcDistrik", function() {
                                 }
                                 
                                 
-                                // Do NOT include a 'scales' property here!
                             }
 
                 });
@@ -485,9 +482,9 @@ $(document).on('change', "#slcDistrik", function() {
 
                 });
 
-                $("#jPenuh").text(tipe['Jemaat Penuh']);
-                $("#jPersiapan").text(tipe['Jemaat Persiapan']);
-                $("#jPospel").text(tipe['Pos Pelayanan']);
+                $("#gjPenuh").text(tipe['Jemaat Penuh']);
+                $("#gjPersiapan").text(tipe['Jemaat Persiapan']);
+                $("#gjPospel").text(tipe['Pos Pelayanan']);
 
 
             } else {

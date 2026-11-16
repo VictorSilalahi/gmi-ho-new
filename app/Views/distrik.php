@@ -177,7 +177,7 @@
                                     <div class="card text-white bg-secondary">
                                         <div class="card-body text-end">
                                             <h5 class="card-title">PRMI</h5>
-                                            <p class="card-text"><h1 class="divJumlahPRWMI">0</h1></p>
+                                            <p class="card-text"><h1 class="divJumlahPRMI">0</h1></p>
                                         </div>
                                     </div>
 
@@ -534,15 +534,15 @@
                                         <tbody>
                                             <tr>
                                                 <td><h4><span class="badge text-bg-secondary">Jemaat Penuh</span></h4></td>
-                                                <td><h4><span class="badge text-bg-secondary" id="jPenuh">x</span></h4></td>
+                                                <td><h4><span class="badge text-bg-secondary" id="gjPenuh">x</span></h4></td>
                                             </tr>
                                             <tr>
                                                 <td><h4><span class="badge text-bg-secondary">Jemaat Persiapan</span></h4></td>
-                                                <td><h4><span class="badge text-bg-secondary" id="jPersiapan">x</span></h4></td>
+                                                <td><h4><span class="badge text-bg-secondary" id="gjPersiapan">x</span></h4></td>
                                             </tr>
                                             <tr>
                                                 <td><h4><span class="badge text-bg-secondary">Pos Pelayanan</span></h4></td>
-                                                <td><h4><span class="badge text-bg-secondary" id="jPospel">x</span></h4></td>
+                                                <td><h4><span class="badge text-bg-secondary" id="gjPospel">x</span></h4></td>
                                             </tr>
                                         </tbody>
                                     </table>
