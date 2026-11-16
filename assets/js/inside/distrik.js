@@ -2,6 +2,7 @@ import { ajax_get, ajax_post, check_token } from "../ajx.js";
 import { set_tanggal, set_tanggal_indo, set_tanggal_database } from "../format.js";
 import { pesan_error, pesan_sukses, pesan_tanya } from "../pesan.js";
 
+let existingChart = null;
 
 $(document).ready(function() {
 
@@ -72,7 +73,7 @@ $(document).on('change', "#slcDistrik", function() {
                 Chart.register(ChartDataLabels);
                 
                 // grafik utk kelompok umur
-                let existingChart = Chart.getChart("TipeJemaat"); 
+                existingChart = Chart.getChart("TipeJemaat"); 
 
                 if (existingChart) {
                     existingChart.destroy();
