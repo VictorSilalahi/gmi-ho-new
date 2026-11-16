@@ -341,6 +341,8 @@ $(document).on('change', "#slcDistrik", function() {
 
                 }
 
+                $("#tblDaftarGereja tbody").html("");
+
                 $(".divJumlahJemaatPenuh").text(tipe['Jemaat Penuh']);
                 $(".divJumlahJemaatPersiapan").text(tipe['Jemaat Persiapan']);
                 $(".divJumlahPospel").text(tipe['Pos Pelayanan']);
@@ -484,7 +486,7 @@ $(document).on('change', "#slcDistrik", function() {
 
                 $("#gjPenuh").text(tipe['Jemaat Penuh']);
                 $("#gjPersiapan").text(tipe['Jemaat Persiapan']);
-                $("#gjPospel").text(tipe['Pos Pelayanan']);
+                $("#jPospel").text(tipe['Pos Pelayanan']);
 
 
             } else {
