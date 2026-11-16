@@ -377,7 +377,7 @@ $(document).on('change', "#slcDistrik", function() {
                 // Chart.register(ChartDataLabels);
 
                 // grafik utk kepemilikan gereja
-                existingChart = Chart.getChart("Kepemilikan"); 
+                let existingChart = Chart.getChart("Kepemilikan"); 
 
                 if (existingChart) {
                     existingChart.destroy();
