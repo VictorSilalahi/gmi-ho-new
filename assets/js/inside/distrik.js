@@ -37,6 +37,7 @@ $(document).on('change', "#slcDistrik", function() {
 
         let temp = ajax_post(gereja_url+"webapi/v1/distrik/jemaat/all", {"distrik": distrik});
 
+
         if (temp.msg=='ok') {
                 let data = temp.data;
 
@@ -71,7 +72,14 @@ $(document).on('change', "#slcDistrik", function() {
                 Chart.register(ChartDataLabels);
                 
                 // grafik utk kelompok umur
+                let existingChart = Chart.getChart("TipeJemaat"); 
+
+                if (existingChart) {
+                    existingChart.destroy();
+                }
+
                 const ctx_tipe_jemaat = document.getElementById('TipeJemaat');
+                
                 new Chart(ctx_tipe_jemaat, {
                             type: 'pie',
                             data: {
@@ -116,6 +124,11 @@ $(document).on('change', "#slcDistrik", function() {
                 $("#jPersiapan").text(data_tipe_jemaat['persiapan']);
 
                 // grafik utk kelompok umur
+                let existingChart = Chart.getChart("KelompokUsia"); 
+
+                if (existingChart) {
+                    existingChart.destroy();
+                }
                 const ctx_kelompok_umur = document.getElementById('KelompokUsia');
                 new Chart(ctx_kelompok_umur, {
                             type: 'pie',
@@ -162,11 +175,15 @@ $(document).on('change', "#slcDistrik", function() {
                 $("#kuPemuda").text(data_kelompok_umur['pemuda']);
                 $("#kuDewasa").text(data_kelompok_umur['dewasa']);
                 $("#kuLansia").text(data_kelompok_umur['lansia']);
-                
-
 
 
                 // grafik utk pendidikan terakhir
+                let existingChart = Chart.getChart("PendidikanTerakhir"); 
+
+                if (existingChart) {
+                    existingChart.destroy();
+                }
+
                 const ctx_pendidikan_terakhir = document.getElementById('PendidikanTerakhir');
                 new Chart(ctx_pendidikan_terakhir, {
                             type: 'pie',
@@ -218,6 +235,12 @@ $(document).on('change', "#slcDistrik", function() {
                 $("#ptS3").text(data_pendidikan['S3']);
 
                 // grafik utk pekerjaan
+                let existingChart = Chart.getChart("Pekerjaan"); 
+
+                if (existingChart) {
+                    existingChart.destroy();
+                }
+
                 const ctx_pekerjaan = document.getElementById('Pekerjaan');
                 new Chart(ctx_pekerjaan, {
                             type: 'pie',
