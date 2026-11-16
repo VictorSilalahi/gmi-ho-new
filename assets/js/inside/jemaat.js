@@ -18,7 +18,7 @@ $(document).ready(function () {
   if (temp.msg=='ok') {
         let data = temp.data;
 
-        console.log(data);
+        // console.log(data);
         
         if (data.length===0) {
             $.LoadingOverlay("hide");            
