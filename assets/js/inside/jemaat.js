@@ -151,7 +151,7 @@ $(document).ready(function () {
         new Chart(ctx_pendidikan_terakhir, {
                     type: 'pie',
                     data: {
-                    labels: ['None', 'SD', 'SMP', 'SMA_SMK', 'D3', 'S1', 'S2', 'S3'],
+                    labels: ['Lainnya', 'SD', 'SMP', 'SMA_SMK', 'D3', 'S1', 'S2', 'S3'],
                     datasets: [{
                         label: '#',
                         data: [data_pendidikan['None'], data_pendidikan['SD'], data_pendidikan['SMP'], data_pendidikan['SMA_SMK'], data_pendidikan['D3'], data_pendidikan['S1'], data_pendidikan['S2'], data_pendidikan['S3']],
@@ -202,7 +202,7 @@ $(document).ready(function () {
         new Chart(ctx_pekerjaan, {
                     type: 'pie',
                     data: {
-                    labels: ['None', 'ASN', 'Dokter', 'Karyawan-Swasta', 'Pedagang', 'Petani', 'TNI-Polri', 'Wiraswasta'],
+                    labels: ['Lainnya', 'ASN', 'Dokter', 'Karyawan-Swasta', 'Pedagang', 'Petani', 'TNI-Polri', 'Wiraswasta'],
                     datasets: [{
                         label: '#',
                         data: [data_pekerjaan['None'], data_pekerjaan['ASN'], data_pekerjaan['Dokter'], data_pekerjaan['Karyawan-Swasta'], data_pekerjaan['Pedagang'], data_pekerjaan['Petani'], data_pekerjaan['TNI-Polri'], data_pekerjaan['Wiraswasta']],
