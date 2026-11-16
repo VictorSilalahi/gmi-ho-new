@@ -124,7 +124,7 @@ $(document).on('change', "#slcDistrik", function() {
                 $("#jPersiapan").text(data_tipe_jemaat['persiapan']);
 
                 // grafik utk kelompok umur
-                let existingChart = Chart.getChart("KelompokUsia"); 
+                existingChart = Chart.getChart("KelompokUsia"); 
 
                 if (existingChart) {
                     existingChart.destroy();
@@ -178,7 +178,7 @@ $(document).on('change', "#slcDistrik", function() {
 
 
                 // grafik utk pendidikan terakhir
-                let existingChart = Chart.getChart("PendidikanTerakhir"); 
+                existingChart = Chart.getChart("PendidikanTerakhir"); 
 
                 if (existingChart) {
                     existingChart.destroy();
@@ -235,7 +235,7 @@ $(document).on('change', "#slcDistrik", function() {
                 $("#ptS3").text(data_pendidikan['S3']);
 
                 // grafik utk pekerjaan
-                let existingChart = Chart.getChart("Pekerjaan"); 
+                existingChart = Chart.getChart("Pekerjaan"); 
 
                 if (existingChart) {
                     existingChart.destroy();
@@ -376,6 +376,11 @@ $(document).on('change', "#slcDistrik", function() {
                 Chart.register(ChartDataLabels);
 
                 // grafik utk kepemilikan gereja
+                existingChart = Chart.getChart("Kepemilikan"); 
+
+                if (existingChart) {
+                    existingChart.destroy();
+                }
                 const ctx_kepemilikan = document.getElementById('Kepemilikan');
                 new Chart(ctx_kepemilikan, {
                             type: 'pie',
@@ -421,6 +426,11 @@ $(document).on('change', "#slcDistrik", function() {
                 $("#pHakPakai").text(kepemilikan['Hak Pakai']);
 
                 // grafik kondisi gedung gereja
+                existingChart = Chart.getChart("KondisiBangunan"); 
+
+                if (existingChart) {
+                    existingChart.destroy();
+                }
                 const ctx_kondisi = document.getElementById('KondisiBangunan');
                 new Chart(ctx_kondisi, {
                             type: 'pie',
@@ -467,6 +477,11 @@ $(document).on('change', "#slcDistrik", function() {
 
 
                 // grafik utk tipe gereja
+                existingChart = Chart.getChart("TipeGereja"); 
+
+                if (existingChart) {
+                    existingChart.destroy();
+                }
                 const ctx_tipe = document.getElementById('TipeGereja');
                 new Chart(ctx_tipe, {
                             type: 'pie',
