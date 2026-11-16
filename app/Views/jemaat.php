@@ -267,7 +267,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><h4><span class="badge text-bg-secondary">None</span></h4></td>
+                                    <td><h4><span class="badge text-bg-secondary">Lainnya</span></h4></td>
                                     <td><h4><span class="badge text-bg-secondary" id="ptNone">x</span></h4></td>
                                 </tr>
                                 <tr>
@@ -331,7 +331,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><h4><span class="badge text-bg-secondary">None</span></h4></td>
+                                    <td><h4><span class="badge text-bg-secondary">Lainnya</span></h4></td>
                                     <td><h4><span class="badge text-bg-secondary" id="pNone">x</span></h4></td>
                                 </tr>
                                 <tr>
