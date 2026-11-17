@@ -17,6 +17,40 @@ $(document).ready(function() {
 });
 
 
+// $(document).on('click', ".btn-save-gereja", function() {
+
+//     let nama_gereja =  $(this).parent().prev().prev().prev().find("input").val();
+
+//     if (nama_gereja=='') {
+
+//         pesan_error("Nama gereja harus ada!");
+
+//         $(this).parent().prev().prev().prev().find("input").focus();
+        
+//         return false;
+//     }
+
+    
+//     let gereja_id = $(this).parent().parent().find("id");
+
+//     let gereja_url = $("#gereja_url").val();
+
+//     let temp = ajax_post(gereja_url+"webapi/v1/distrik/gereja/save", {"gereja_id": gereja_id, "nama_gereja": nama_gereja});
+
+//     if (temp.msg=='ok') {
+
+//         pesan_sukses("Perubahan nama gereja berhasil disimpan!");
+
+//     } else {
+
+//         pesan_error("Perubahan nama gereja tidak berhasil disimpan!");
+
+//     }
+
+    
+// });
+
+
 $(document).on('click', ".btn-detail-gereja", function() {
 
     let gereja_id = $(this).parent().parent().attr("id");
@@ -360,7 +394,7 @@ $(document).on('change', "#slcDistrik", function() {
                     // koordinat.push({"lat": data[i]['lat'], "lng": data[i]['lng'], "kondisi": data[i]['kondisi_bangunan'], "kepemilikan": data[i]['kepemilikan']});
 
                     // masukkan ke daftar gereja untuk ditampilkan di tabel
-                    str = str + "<tr id='"+data[i]['gereja_id']+"'><td>"+no+"</td><td>"+data[i]['nama_gereja']+"</td><td>"+data[i]['alamat']+"</td><td>"+data[i]['email']+"</td><td><button class='btn btn-info btn-detail-gereja'>Detail</button></td></tr>";
+                    str = str + "<tr id='"+data[i]['gereja_id']+"'><td>"+no+"</td><td>"+data[i]['nama_gereja']+"</td><td>"+data[i]['alamat']+"</td><td>"+data[i]['email']+"</td><td>&nbsp;<button class='btn btn-info btn-detail-gereja'>Detail</button></td></tr>";
                     no++;
 
                 }
