@@ -30,6 +30,11 @@ class Gereja extends BaseController
         return view('gereja_pemetaan');
     }
 
+    public function pekerja()
+    {
+        return view('pekerja');
+    }
+
     public function seting()
     {
         return view('seting');

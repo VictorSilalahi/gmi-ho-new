@@ -24,7 +24,7 @@ $routes->post('/gereja/all', 'Gereja::gereja_all');
 
 $routes->get('/distrik', 'Distrik::index');
 
-
+$routes->get('/pekerja', 'Gereja::pekerja');
 
 
 
