@@ -32,6 +32,7 @@
                         <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>jemaat">Jemaat</a></li>
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="<?php echo(base_url()); ?>gereja/stat">Gereja</a></li>
                         <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>distrik">Distrik</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>pekerja">Pekerja</a></li>
                         <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>pencarian">Pencarian</a></li>
                         <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>seting">Seting</a></li>
                         <li class="nav-item"><a class="nav-link" href="<?php echo(base_url()); ?>logout">Logout</a></li>
