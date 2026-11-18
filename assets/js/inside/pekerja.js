@@ -9,62 +9,119 @@ $(document).ready(function () {
 
     check_token();
 
-    loadDataDistrik();
+    loadDataPekerja();
 
     $.LoadingOverlay("hide");
 
 });
 
 
-$(document).on("change", "#slcDistrik", function() {
+$(document).on("click", ".btn-tambah-pekerja", function() {
 
-    let distrik = $(this).val();
+    $("#opAddEditPekerja").text("Tambah Pekerja");
+    $("#modalAddEditPekerja").modal("show");
+
+ 
+});
+
+$(document).on("click", ".btn-ok-simpan-pekerja", function() {
+
+    if ($("#txtNamaPekerja").val()=='') {
+        pesan_error("Masukkan nama pekerja!");
+        return false;
+    }
+
+    if ($("#txtMobilePhone").val()=='') {
+        pesan_error("Masukkan nomor mobile phone!");
+        return false;
+    }
+
+    if ($("#txtTanggalLahir").val()=='') {
+        pesan_error("Masukkan tanggal lahir pekerja!");
+        return false;
+    }
+
+    if ($("#txtTanggalDiterima").val()=='') {
+        pesan_error("Masukkan tanggal penerimaan pekerja!");
+        return false;
+    }
+
+    if ($("#txtTanggalSK").val()=='') {
+        pesan_error("Masukkan tanggal SK Penempatan!");
+        return false;
+    }
+
+
+    let nama = $("#txtNamaPekerja").val();
+    let email = $("#txtEmail").val();
+    let mobile_phone = $("#txtMobilePhone").val();
+    let tanggal_lahir = $("#txtTanggalLahir").val();
+    let tanggal_diterima = $("#txtTanggalDiterima").val();
+    let tanggal_tahbis = $("#txtTanggalTahbis").val();
+    let status = $(".bg-status").text();
+    let penempatan = $("#slcPenempatan").val();
+    let tanggal_sk = $("#txtTanggalSK").val();
 
     let gereja_url = $("#gereja_url").val();
 
-    let str = '';
-
-    let temp = ajax_post(gereja_url+"webapi/v1/distrik/gereja/indistrik", {"distrik": distrik});
+    let temp = ajax_post(gereja_url+"webapi/v1/pekerja/add", {   
+                "nama": nama, 
+                "email": email, 
+                "mobile_phone": mobile_phone, 
+                "tanggal_lahir": tanggal_lahir, 
+                "tanggal_diterima": tanggal_diterima,
+                "tanggal_tahbis": tanggal_tahbis,
+                "status": status,
+                "penempatan": penempatan,
+                "tanggal_sk": tanggal_sk
+        });
 
     if (temp.msg=='ok') {
 
-        console.log(temp.data);
 
-        let data = temp.data;
+    } else {
 
-        let no = 1;
 
-        for (let i=0; i<data.length; i++) {
+    }
 
-            str = str + "<tr id='"+data[i]['penempatan_id']+"'><td>"+no+"</td><td>"+data[i]['nama_gereja']+"</td><td>"+data[i]['alamat']+"</td><td>"+data[i]['email_gereja']+"</td><td>"+data[i]['nama_pendeta']+"</td><td>"+data[i]['email_pendeta']+"</td><td>"+data[i]['mobile_phone']+"</td><td><button type='button' class='btn btn-dark btn-set'>Seting</button></td></tr>";
-            no++;
 
-        }
-
-        $("#tblGereja tbody").html(str);
-
-    };
-
-2    
 });
 
-function loadDataDistrik() {
+$(document).on("change", "#txtTanggalTahbis", function() {
+
+    
+    if ($(this).val()!='') {
+        $(".bg-status").text("Pendeta");
+    } else {
+        $(".bg-status").text("Guru Injil");
+    }
+
+
+});
+
+function loadDataPekerja() {
 
     let gereja_url = $("#gereja_url").val();
-    let temp = ajax_get(gereja_url+"webapi/v1/distrik/all", {});
+    let temp = ajax_get(gereja_url+"webapi/v1/pekerja/all", {});
 
             // console.log(temp);
     if (temp.msg=='ok') {
 
-        let str = "<option value=''></option>";
+        
+        let str = "";
+        let data = temp.data;
 
-        for (let i=0; i<temp.data.length; i++) {
+        console.log(data);
 
-            str = str + "<option value='"+temp.data[i]['nama_distrik']+"'>"+temp.data[i]['nama_distrik']+"</option>";
+        let no = 1;
+        for (let i=0; i<data.length; i++) {
 
+            let lama_bekerja = data[i]['lama_bekerja'];
+            str = str + "<tr id='"+data[i]['pekerja_id']+"'><td>"+no+"</td><td>"+data[i]['nama']+"</td><td>"+data[i]['email']+"</td><td>"+data[i]['mobile_phone']+"</td><td>"+set_tanggal(data[i]['tanggal_lahir'])+"</td><td>"+set_tanggal(data[i]['tanggal_diterima'])+"</td><td>"+set_tanggal(data[i]['tanggal_tahbis'])+"</td><td>"+data[i]['status']+"</td><td>"+data[i]['penempatan']+"</td><td>"+set_tanggal(data[i]['tanggal_sk'])+"</td><td>"+lama_bekerja['y']+" tahun dan "+lama_bekerja['m']+" bulan"+"</td>";
+            no++;
         }
 
-        $("#slcDistrik").html(str);
+        $("#tblGereja tbody").html(str);
     }    
 
 }

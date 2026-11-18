@@ -50,12 +50,25 @@
             </div>
             <div class="col-sm-12 col-md-4 col-lg-4">
 
-                <label>Pilih Distrik</label>
-                <select id="slcDistrik">
-                </select>
+                <label>Cari Pekerja</label>
+                <input type="text" id="txtCari">
+                <button class="btn btn-primary" id="btn-cari">Cari</button>
                 
             </div>
             <div class="col-sm-12 col-md-4 col-lg-4">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-4 col-lg-4">
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <button class="btn btn-primary btn-tambah-pekerja">Tambah</button>
             </div>
         </div>
 
@@ -70,14 +83,18 @@
                 <table class="table" id="tblGereja">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Nama Gereja</th>
-                            <th scope="col">Alamat</th>
-                            <th scope="col">Email Gereja</th>
-                            <th scope="col">Pimpinan Jemaat</th>
-                            <th scope="col">Email P.Jemaat</th>
-                            <th scope="col">Mobile Phone P.Jemaat</th>
-                            <th scope="col">Action</th>
+                            <td>#</th>
+                            <td>Nama </th>
+                            <td>Email</th>
+                            <td>Mobile Phone</th>
+                            <td>Tanggal Lahir</th>
+                            <td>Tanggal Diterima</th>
+                            <td>Tanggal Pentahbisan</th>
+                            <td>Status</th>
+                            <td>Penempatan</th>
+                            <td>Tanggal S.K</th>
+                            <td>Lama Penempatan</th>
+                            <td>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -95,7 +112,85 @@
     
 
 
-
+    <!-- Modal -->
+    <div class="modal fade" id="modalAddEditPekerja" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="opAddEditPekerja">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label">Nama</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="txtNamaPekerja" placeholder="nama pekerja">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="txtEmail" placeholder="name@example.com">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label">Mobile Phone</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="txtMobilePhone" placeholder="mobile phone">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label">Tanggal Lahir</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" id="txtTanggalLahir" placeholder="">
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <label class="col-sm-4 col-form-label">Tanggal Diterima</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" id="txtTanggalDiterima" placeholder="">
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <label class="col-sm-4 col-form-label">Tanggal Tahbis</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" id="txtTanggalTahbis" placeholder="">
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <label class="col-sm-4 col-form-label">Status</label>
+                    <div class="col-sm-10">
+                        <h5><span class="badge bg-secondary bg-status">Guru Injil</span></h5>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <label class="col-sm-4 col-form-label">Penempatan</label>
+                    <div class="col-sm-10">
+                        <select id="slcPenempatan">
+                            <option value="PimpinanWilayah">Pimpinan Wilayah</option>
+                            <option value="PimpinanDistrik">Pimpinan Distrik</option>
+                            <option value="PimpinanJemaat">Pimpinan Jemaat</option>
+                            <option value="Asisten">Asisten</option>
+                            <option value="Lembaga">Lembaga</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label">Tanggal S.K</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" id="txtTanggalSK" placeholder="">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            <button type="button" class="btn btn-primary btn-ok-simpan-pekerja">OK</button>
+        </div>
+        </div>
+    </div>
+    </div>
     
     
     <input type="hidden" id="base_url" value="<?php echo(base_url()); ?>" />
