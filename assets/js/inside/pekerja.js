@@ -53,6 +53,8 @@ $(document).on("click", ".btn-ok-simpan-pekerja", function() {
     }
 
     let pekerja_id = null;
+    let gereja_url = $("#gereja_url").val();    
+    let temp = null;
 
     let nama = $("#txtNamaPekerja").val();
     let email = $("#txtEmail").val();
@@ -66,33 +68,59 @@ $(document).on("click", ".btn-ok-simpan-pekerja", function() {
 
     if ($("#opPekerja").val()=='edit') {
 
+        pekerja_id = $("#pekerja_id").val();
 
-
-    }
-    let gereja_url = $("#gereja_url").val();
-
-    let temp = ajax_post(gereja_url+"webapi/v1/pekerja/add", {   
-                "nama": nama, 
-                "email": email, 
-                "mobile_phone": mobile_phone, 
-                "tanggal_lahir": tanggal_lahir, 
-                "tanggal_diterima": tanggal_diterima,
-                "tanggal_tahbis": tanggal_tahbis,
-                "status": status,
-                "penempatan": penempatan,
-                "tanggal_sk": tanggal_sk
+        temp = ajax_post(gereja_url+"webapi/v1/pekerja/ubah", {  
+                    "pekerja_id": pekerja_id, 
+                    "nama": nama, 
+                    "email": email, 
+                    "mobile_phone": mobile_phone, 
+                    "tanggal_lahir": tanggal_lahir, 
+                    "tanggal_diterima": tanggal_diterima,
+                    "tanggal_tahbis": tanggal_tahbis,
+                    "status": status,
+                    "penempatan": penempatan,
+                    "tanggal_sk": tanggal_sk
         });
 
-    if (temp.msg=='ok') {
+        if (temp.msg=='ok') {
 
-        pesan_sukses("Data berhasil ditambah!");
-        loadDataPekerja();
-        $("#modalAddEditPekerja").modal("hide");
+            pesan_sukses("Data berhasil diubah!");
+            loadDataPekerja();
+            $("#modalAddEditPekerja").modal("hide");
+
+        } else {
+
+            pesan_error("Error!");
+
+        }
+
 
     } else {
 
-        pesan_error("Error!");
+        temp = ajax_post(gereja_url+"webapi/v1/pekerja/add", {   
+                    "nama": nama, 
+                    "email": email, 
+                    "mobile_phone": mobile_phone, 
+                    "tanggal_lahir": tanggal_lahir, 
+                    "tanggal_diterima": tanggal_diterima,
+                    "tanggal_tahbis": tanggal_tahbis,
+                    "status": status,
+                    "penempatan": penempatan,
+                    "tanggal_sk": tanggal_sk
+        });
 
+        if (temp.msg=='ok') {
+
+            pesan_sukses("Data berhasil ditambah!");
+            loadDataPekerja();
+            $("#modalAddEditPekerja").modal("hide");
+
+        } else {
+
+            pesan_error("Error!");
+
+        }
     }
 
 
@@ -129,10 +157,31 @@ $(document).on("click", ".btn-edit", function() {
     $("#pekerja_id").val($(this).parent().parent().attr("id"));
 
     let pekerja_id = $(this).parent().parent().attr("id");
+    let gereja_url = $("#gereja_url").val();
 
     let temp = ajax_get(gereja_url+"webapi/v1/pekerja/"+pekerja_id, {});
 
-    $("#modalAddEditPekerja").modal("show");
+    if (temp.msg=='ok') {
+
+        let data = temp.data;
+
+        $("#txtNamaPekerja").val(data['nama']);
+        $("#txtEmail").val(data['email']);
+        $("#txtMobilePhone").val(data['mobile_phone']);
+        $("#txtTanggalLahir").val(data['tanggal_lahir']);
+        $("#txtTanggalDiterima").val(data['tanggal_diterima']);
+        $("#txtTanggalTahbis").val(data['tanggal_tahbis']);
+        $(".bg-status").text(data['status']);
+        $("#slcPenempatan").val(data['penempatan']);
+        $("#txtTanggalSK").val(data['tanggal_sk']);
+
+        $("#modalAddEditPekerja").modal("show");
+
+    } else {
+
+        pesan_error("Error!");
+    }
+
 
 
 });
