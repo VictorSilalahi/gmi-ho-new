@@ -92,7 +92,7 @@ $(document).on('change', "#slcDistrik", function() {
                 let data_tipe_jemaat = data.tipe_jemaat;
                 let data_seksi = data.seksi;
                 
-                // console.log(data_seksi);
+                // console.log(data);
 
                 $(".divJumlahJiwa").text(jumlah_jiwa);
                 $(".divJumlahKK").text(jumlah_kk);
@@ -101,6 +101,7 @@ $(document).on('change', "#slcDistrik", function() {
                 $(".divJumlahP3MI").text(data_seksi['P3MI']);
                 $(".divJumlahPWMI").text(data_seksi['PWMI']);
                 $(".divJumlahPRMI").text(data_seksi['PRMI']);
+                $(".divJumlahSM").text(data_seksi['SM']);
 
 
 
@@ -334,6 +335,7 @@ $(document).on('change', "#slcDistrik", function() {
         }
 
 
+        // temp = ajax_post(gereja_url+"webapi/v1/distrik/kebaktian", {"distrik": distrik});
 
         temp = ajax_post(gereja_url+"webapi/v1/distrik/gereja/all", {"distrik": distrik});
 
@@ -341,7 +343,7 @@ $(document).on('change', "#slcDistrik", function() {
         if (temp.msg=='ok') {
                 let data = temp.data;
 
-                console.log(data);
+                // console.log(data);
                 let jumlah_gereja = data.length;
 
                 let str = '';
@@ -559,7 +561,7 @@ $(document).on('change', "#slcDistrik", function() {
 
                 $("#gjPenuh").text(tipe['Jemaat Penuh']);
                 $("#gjPersiapan").text(tipe['Jemaat Persiapan']);
-                $("#jPospel").text(tipe['Pos Pelayanan']);
+                $("#gjPospel").text(tipe['Pos Pelayanan']);
 
 
             } else {

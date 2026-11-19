@@ -197,8 +197,26 @@
 
                     </div>
 
-                    <br><hr><br>
+                    <br>
+                    
+                    <div class="row">
 
+                                <div class="col-sm-12 col-md-12 col-lg-12">
+
+                                    <div class="card">
+                                        <div class="card-body text-end">
+                                            <h5 class="card-title">Tingkat Kehadiran Kebaktian</h5>
+                                            <canvas id="KehadiranKebaktian"></canvas>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                    </div>
+
+                    <hr>
+                    
                     <div class="row">
 
                         <div class="col-sm-12 col-md-3 col-lg-3">
