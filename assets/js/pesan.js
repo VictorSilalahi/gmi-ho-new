@@ -20,7 +20,7 @@ export function pesan_sukses(pesan) {
 
 }
 
-export function pesan_tanya(pesan) {
+export async function pesan_tanya(pesan) {
 
     Swal.fire({
         title: pesan,
@@ -30,11 +30,15 @@ export function pesan_tanya(pesan) {
         cancelButtonColor: "#d33",
         confirmButtonText: "Yes, delete it!"
         }).then((result) => {
-            if (result.isConfirmed) Swal.fire({
-                title: "Deleted!",
-                text: "Your file has been deleted.",
-                icon: "success"
-        });
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: "Deleted!",
+                    text: "Your file has been deleted.",
+                    icon: "success"
+                });
+                
+                return true;
+            }
     });
 
 }
