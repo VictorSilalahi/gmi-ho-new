@@ -16,36 +16,40 @@ $(document).ready(function () {
 $(document).on("keydown", "#txtCari", function(e) {
 
     if (e.key === 'Enter') {
-      // Prevent the default action (like submitting a form) if necessary
-      e.preventDefault(); 
+        // Prevent the default action (like submitting a form) if necessary
+        e.preventDefault(); 
 
-      if ($("#txtCari").val()!=='') {
+        $.LoadingOverlay("show"); 
 
-        let kata = $("#txtCari").val();
+        if ($("#txtCari").val()!=='') {
 
-        let gereja_url = $("#gereja_url").val()+"webapi/v1/wilayah/cari";
+            let kata = $("#txtCari").val();
 
-        let temp = ajax_post(gereja_url, {"cari": kata});
+            let gereja_url = $("#gereja_url").val()+"webapi/v1/wilayah/cari";
 
-        let str = '';
-        
-        if (temp.msg=='ok') {
+            let temp = ajax_post(gereja_url, {"cari": kata});
 
-            console.log(temp.data);
+            let str = '';
+            
+            if (temp.msg=='ok') {
 
-            let no = 1
-            for (let i=0; i<temp.data.length; i++) {
+                console.log(temp.data);
 
-                str = str + "<tr id='"+temp.data[i]['gereja_id']+"'><td>"+no+"</td><td>"+temp.data[i]['nama_gereja']+"</td><td>"+temp.data[i]['alamat']+"</td><td>"+temp.data[i]['tipe']+"</td><td>"+temp.data[i]['distrik']+"</td><td><button class='btn btn-info btn-detail-gereja'>Detail</button></td></tr>";
-                no++;
+                let no = 1
+                for (let i=0; i<temp.data.length; i++) {
+
+                    str = str + "<tr id='"+temp.data[i]['gereja_id']+"'><td>"+no+"</td><td>"+temp.data[i]['nama_gereja']+"</td><td>"+temp.data[i]['alamat']+"</td><td>"+temp.data[i]['tipe']+"</td><td>"+temp.data[i]['distrik']+"</td><td><button class='btn btn-info btn-detail-gereja'>Detail</button></td></tr>";
+                    no++;
+
+                }
+
+                $("#tblGereja tbody").html(str);
 
             }
 
-            $("#tblGereja tbody").html(str);
-
         }
 
-      }
+        $.LoadingOverlay("hide"); 
     }    
 
 });

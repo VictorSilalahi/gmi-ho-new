@@ -64,7 +64,12 @@ $(document).on('click', ".btn-detail-gereja", function() {
 $(document).on('change', "#slcDistrik", function() {
 
 
+
     if ($(this).val()!=='') {
+
+
+        $.LoadingOverlay("show");    
+
 
         let distrik = $(this).val();
 
@@ -568,6 +573,9 @@ $(document).on('change', "#slcDistrik", function() {
                 pesan_error("Terjadi error pada remote api!");
                 return false;
             }        
+
+        
+        $.LoadingOverlay("hide");    
 
 
         }
