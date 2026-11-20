@@ -334,13 +334,12 @@ $(document).on('change', "#slcDistrik", function() {
 
 
         } else {
+           
+            pesan_error("Terjadi error pada remote api!");
+            return false;
 
-                pesan_error("Terjadi error pada remote api!");
-                return false;
         }
 
-
-        // temp = ajax_post(gereja_url+"webapi/v1/distrik/kebaktian", {"distrik": distrik});
 
         temp = ajax_post(gereja_url+"webapi/v1/distrik/gereja/all", {"distrik": distrik});
 
@@ -570,12 +569,66 @@ $(document).on('change', "#slcDistrik", function() {
 
 
             } else {
+
                 pesan_error("Terjadi error pada remote api!");
                 return false;
             }        
 
-        
-        $.LoadingOverlay("hide");    
+
+            
+            temp = ajax_post(gereja_url+"webapi/v1/distrik/kebaktian", {"distrik": distrik});
+
+            if (temp.msg=='ok') {
+
+                let data_kehadiran = temp.data;
+
+                // console.log(data_kehadiran);
+
+                let bulan = [];
+                let kehadiran = [];
+
+                for (let i=data_kehadiran.length-1; i>=0; i--) {
+
+                    bulan.push(data_kehadiran[i]['masa_waktu']);
+                    kehadiran.push(data_kehadiran[i]['jumlah_kehadiran'])
+                }
+
+                // grafik utk tipe gereja
+                existingChart = Chart.getChart("KehadiranKebaktian"); 
+
+                if (existingChart) {
+                    existingChart.destroy();
+                }
+                const ctx_tipe = document.getElementById('KehadiranKebaktian');
+                new Chart(ctx_tipe, {
+                            type: 'bar',
+                            data: {
+                            labels: bulan,
+                            datasets: [{
+                                label: 'Jumlah Kehadiran',
+                                data: kehadiran,
+                                borderWidth: 0
+                            }]
+                            },
+                            options: {
+                                scales: {
+                                    y: {
+                                        beginAtZero: true
+                                    }
+                                },
+                                responsive: true,
+                                maintainAspectRatio: false 
+                            }
+                });
+
+            } else {
+
+                pesan_error("Terjadi error pada remote api!");
+                return false;
+
+            }        
+
+            $.LoadingOverlay("hide");    
 
 
         }

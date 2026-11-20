@@ -201,16 +201,16 @@
                     
                     <div class="row">
 
-                                <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
 
                                     <div class="card">
-                                        <div class="card-body text-end">
+                                        <div class="card-body text-end" style="height:300px">
                                             <h5 class="card-title">Tingkat Kehadiran Kebaktian</h5>
                                             <canvas id="KehadiranKebaktian"></canvas>
                                         </div>
                                     </div>
 
-                                </div>
+                        </div>
 
 
                     </div>
